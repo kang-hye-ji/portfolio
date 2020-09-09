@@ -1,0 +1,154 @@
+@charset "utf-8";
+@import url('base.css');
+@import url('layout.css');
+@import url('home/home_text.css');
+
+/* header 해당 버튼 강조 */
+.contWrap header nav ul>li:nth-child(2)>a>span{
+    background:#e42050;
+}
+.contWrap header nav ul>li:nth-child(2)>a:hover>span{
+    border:2px solid #e42050;
+}
+.contWrap header nav ul>li:nth-child(2)>a>h2{
+    font-weight:700;
+}
+
+
+.contWrap .contents{
+    width:calc(100% - 280px); height:100%; position:fixed; z-index:1; top:0; right:0;
+    background:#2d787e;
+}
+
+.contents .contentsWrap{
+    width:700px; height:333px; position:absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%);
+
+}
+.contents .welcome{
+    position:absolute; left:calc(50% - 317px); top:0; width:635px;
+    font-family: 'Shadows Into Light', cursive; font-size:61px; color:#222;
+}
+.contents .welcome>span{
+    font-family: 'Shadows Into Light', cursive; font-size:50px;
+}
+
+.contents .intro{
+    position:absolute; top:150px; left:50%; width:635px;
+    color:#f9d5c5; font-size:28px; vertical-align: text-bottom;
+    transform:translateX(-50%); -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%);
+}
+.contents .intro h3,
+.contents .intro span,
+.contents .intro strong{
+    vertical-align: text-bottom;
+}
+.contents .intro h3{
+    display:inline-block; vertical-align: text-bottom;
+    font-weight:700; font-size:40px;
+}
+.contents .intro strong{
+    font-size:38px;
+}
+.contents .intro span{
+    font-size:20px;
+}
+
+
+@media (max-width:1024px){
+    /* header 해당 버튼 강조 */
+    .contWrap header nav ul>li:nth-child(2)>a>span{
+        float:none; display:block; width:9px; height:9px; margin:0 ;
+        position: absolute; top:-10px; left:50%;
+        transform:translateX(-50%); -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%);
+        background:#e42050; border:none;
+    }
+    .contWrap header nav ul>li:nth-child(2)>a:hover>span{
+        border:0;background:#e42050;
+    }
+    .contWrap header nav ul>li:nth-child(2)>a:hover>h2{
+        color:#e42050;
+    }
+    .contWrap header nav ul>li>a:hover>span{
+        display:block;
+        background:#f45a76; border:0;
+    }
+
+
+    .contWrap .contents{
+        width:100%; height:calc(100% - 85px); top:85px;
+    }
+    
+    .contents .contentsWrap{
+        width:63vw; height:29vw;
+    }
+    .contents .welcome{
+        left:0; width:63vw;
+        font-size:5.8594vw;
+    }
+    .contents .welcome>span{
+        font-size:5.8594vw;
+    }
+    
+    .contents .intro{
+        top:13.6484vw; width:46vw;
+        font-size:2.4414vw;
+    }
+    .contents .intro h3{
+        font-size:3.5156vw;
+    }
+    .contents .intro strong{
+        font-size:3.1250vw;
+    }
+    .contents .intro span{
+        font-size:1.6602vw;
+    }
+}
+@media (max-width:768px){
+    /* header 해당 버튼 강조 */
+    .contWrap header nav ul>li:nth-child(2){
+        background:#416E68;
+    }
+    .contWrap header nav ul>li:nth-child(2)>a>span{
+        float:left; display:block; width:12px; height:12px; margin:2px 0 0 20px; position:static; top:unset; left:unset;
+        background:#f9d5c5; border:0; transform:none;
+    }
+    .contWrap header nav ul>li:nth-child(2)>a:hover>span{
+        border:0; background:#f9d5c5;
+    }
+    
+    .contWrap header nav ul>li:nth-child(2)>a:hover>h2{
+        color:#f9d5c5;
+    }
+    .contWrap header nav ul>li>a:hover>span{
+        background:#f9d5c5; border:0;
+    }
+
+
+    .contWrap .contents{
+        height:calc(100% - 62px); top:62px;
+    }
+    .contents .contentsWrap{
+        width:100%; height:48vw;
+    }
+    .contents .welcome{
+        width:95vw; left:calc(50% - 46.5vw);
+        font-size:8.8594vw;
+    }
+    .contents .welcome>span{
+        font-size:8.8594vw;
+    }
+    .contents .intro{
+        top:22.6484vw; width:74vw;
+        font-size:4vw;
+    }
+    .contents .intro h3{
+        font-size:5.5156vw;
+    }
+    .contents .intro strong{
+        font-size:5.1250vw;
+    }
+    .contents .intro span{
+        font-size:3.6602vw;
+    }
+}

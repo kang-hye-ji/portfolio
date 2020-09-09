@@ -1,0 +1,331 @@
+@charset "utf-8";
+@import url('base.css');
+@import url('layout.css');
+
+/* header 해당 버튼 강조 */
+.contWrap header nav ul>li:nth-child(6)>a>span{
+    background:#e42050;
+}
+.contWrap header nav ul>li:nth-child(6)>a:hover>span{
+    border:2px solid #e42050;
+}
+.contWrap header nav ul>li:nth-child(6)>a>h2{
+    font-weight:700;
+}
+
+/* 우측 전화 사라지기 */
+.contWrap aside.phone{
+    animation:asideHide 0.7s ease both;
+}
+
+@keyframes asideHide{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
+
+/* contents */
+.contWrap .contents{
+    width:calc(100% - 280px); height:100%; margin-left:280px; position:absolute;
+    background:#2d787e;
+}
+
+.contWrap .contents .contentsWrap{
+    padding:100px 0; width:367px; height:362px; position:absolute; left:50%; top:50%;
+    transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%);
+}
+
+
+
+.contents .phone{
+    margin:0 auto; width:287px; position:relative;
+    -webkit-animation: bounce-in-top 1.1s 0.3s both;
+	animation: bounce-in-top 1.1s 0.3s both;
+}
+
+ @-webkit-keyframes bounce-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translateY(-500px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: translateY(-65px);
+              transform: translateY(-65px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: translateY(-28px);
+              transform: translateY(-28px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    90% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes bounce-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translateY(-500px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: translateY(-65px);
+              transform: translateY(-65px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: translateY(-28px);
+              transform: translateY(-28px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    90% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+
+
+.contents .rightSideWrap{
+    width:287px; height:337px;position: relative; z-index: 2;
+    background:url('../img/callBox.png') no-repeat;
+}
+.contents .rightSideWrap .phoneBody{
+    position: relative; z-index:2;
+}
+.contents .rightSideWrap .phoneBody .top>p{
+    width:176px; height:30px; position:absolute; top:37px; left:90px;
+    background:#4a3a38; line-height:30px; text-align:center; letter-spacing: 2px;
+    font-size:25px; color:#f9d5c5; font-family: 'VT323', monospace; font-weight:500;
+    transform:none;
+}
+
+.contents .rightSideWrap .phoneBody>ul{
+    width:186px; height:247px; position: absolute; right:15px; top:75px;
+    background:#d2a6a0; border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px; 
+}
+.contents .rightSideWrap .phoneBody>ul>li:first-child{
+    margin-top:16px;
+}
+.contents .rightSideWrap .phoneBody>ul>li{
+    margin-bottom:10px;
+}
+.contents .rightSideWrap .phoneBody>ul dl>dt{
+    height:28px; line-height:28px; padding-left:15px;
+    background:#f9d5c5; color:#d2a6a0; font-weight:900; font-size:18px; letter-spacing: 1px;
+}
+.contents .rightSideWrap .phoneBody>ul dl>dd{
+    padding-left:15px; margin-top:5px; 
+    color:#4a3a38; font-size:14px; font-weight:600;
+}
+.contents .rightSideWrap .phoneBody>ul>li:nth-child(2) dl>dd{
+    font-size:13px;
+}
+.contents .rightSideWrap .phoneBody>ul dl>dd>a{
+    padding-left:26px; margin-top:5px;
+    color:#4a3a38; font-size:14px; font-weight:600;
+}
+.contents .rightSideWrap .phoneBody>ul>li:nth-child(3) dl>dd>a{
+    background:url('../img/github.png') left center no-repeat;
+    background-size:20px 20px;
+}
+.contents .rightSideWrap .phoneBody>ul>li:nth-child(4) dl>dd>a{
+    background:url('../img/blog.png') left center no-repeat;
+    background-size:20px 20px;
+}
+
+.contents .rightSideWrap>.phoneHandle{
+    display:block; width:57.4px; height:150px; position:absolute; top:80px; left:1px;
+}
+.contents .rightSideWrap>.phoneHandle>img{
+    height:100%; width:100%;
+}
+.contents .rightSideWrap:hover>.phoneHandle{
+	animation: shake-lr 2.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+	animation: shake-lr 2.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+}
+
+  @keyframes shake-lr {
+    0%/* ,
+    100% */ {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      /* -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%; */
+    }
+    2.5% {
+      -webkit-transform: rotate(-8deg);
+              transform: rotate(-8deg);
+    }
+    5%,
+    10%,
+    15% {
+      -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+    7.5%,
+    12.5%,
+    17.5% {
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+    20% {
+      -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+    }
+    30% {
+      -webkit-transform: rotate(-3deg);
+              transform: rotate(-3deg);
+    }
+  }
+  
+
+
+
+.contents .phone .shadow{
+    width:305px; height:83px; position: absolute; right:-39px; bottom:-25px; z-index:1;
+    background:#000; border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%;
+    animation:shadow 0.4s 0.4s ease both;
+}
+
+@keyframes shadow{
+    from{
+        opacity: 0;
+        height:0;
+        width:0;
+    }
+    to{
+        opacity: 0.4;
+        height:83px;
+        width:305px;
+    }
+}
+
+@media (max-width:1024px){
+        /* header 해당 버튼 강조 */
+        .contWrap header nav ul>li:nth-child(6)>a>span{
+            float:none; display:block; width:9px; height:9px; margin:0 ;
+            position: absolute; top:-10px; left:50%;
+            transform:translateX(-50%); -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%);
+            background:#e42050; border:none;
+        }
+        .contWrap header nav ul>li:nth-child(6)>a:hover>span{
+            border:0;background:#e42050;
+        }
+        .contWrap header nav ul>li:nth-child(6)>a:hover>h2{
+            color:#e42050;
+        }
+        .contWrap header nav ul>li>a:hover>span{
+            display:block;
+            background:#f45a76; border:0;
+        }
+
+        /* contents */
+        .contWrap .contents{
+                width:100%; height:calc(100% - 85px); margin:85px 0 0 0;
+        }
+        
+        .contWrap .contents .contentsWrap{
+                padding:9.7656vw 0; width:327px; height:362px;
+        }
+        .contWrap .contents .contentsWrap .phone{
+                margin:0;
+        }
+}
+
+@media (max-width:768px){
+/* header 해당 버튼 강조 */
+.contWrap header nav ul>li:nth-child(6){
+        background:#416E68;
+}
+.contWrap header nav ul>li:nth-child(6)>a>span{
+        float:left; display:block; width:12px; height:12px; margin:2px 0 0 20px; position:static; top:unset; left:unset;
+        background:#f9d5c5; border:0; transform:none;
+}
+.contWrap header nav ul>li:nth-child(6)>a:hover>span{
+        border:0; background:#f9d5c5;
+}
+
+.contWrap header nav ul>li:nth-child(6)>a:hover>h2{
+        color:#f9d5c5;
+}
+.contWrap header nav ul>li>a:hover>span{
+        background:#f9d5c5; border:0;
+}
+
+
+/* contents */
+.contWrap{
+        height:100%;
+}
+.contWrap .contents{
+        height:calc(100% - 62px); margin:62px 0 0 0;
+}
+}

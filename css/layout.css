@@ -1,0 +1,478 @@
+body{
+    background:#2d787e;
+}
+
+.contWrap header{
+    position:fixed; left:0; top:0; z-index:100;
+}
+.contWrap header{
+    height:100%; width:280px;
+    background:#f9d5c5;
+}
+.contWrap header h1.logo{
+    display:none;
+}
+.contWrap header button.mobMenuBtn{
+    display:none;
+}
+
+.contWrap header nav{
+    position:fixed; left:30px; top:50%;
+    transform:translateY(-50%); -webkit-transform:translateY(-50%); -ms-transform:translateY(-50%);
+}
+.contWrap header nav:after{
+    content:''; width:1px; height:250px; display:block; position:absolute; top:-16px; left:7.5px; z-index:-1;
+    background:#e42050;
+}
+.contWrap header nav ul>li{
+    margin-bottom:12px;
+}
+.contWrap header nav ul>li>a{
+    display:block; *zoom:1; height:30px; line-height:30px;
+}
+.contWrap header nav ul>li>a:after{
+    display:table; clear:both; content:'';
+}
+
+.contWrap header nav ul>li.prevBtn>a,
+.contWrap header nav ul>li.nextBtn>a{
+    display:block; width:0; height:0; position:absolute; left:-3px;
+    border-width:11px; border-color:transparent transparent #e42050 transparent; border-style:solid;
+}
+.contWrap header nav ul>li.prevBtn>a{
+    top:-33px;
+}
+.contWrap header nav ul>li.nextBtn>a{
+    bottom:-29px;
+    border-color:#e42050 transparent transparent transparent;
+}
+
+.contWrap header nav ul>li>a>span{
+    float:left; display:block; width:12px; height:12px; margin:4px 18px 0 0 ;
+    border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%;
+    background:#f9d5c5;
+    border:2px solid #e42050;
+}
+.contWrap header nav ul>li>a:hover>span{
+    background:#f45a76;
+    border:2px solid #f45a76;
+}
+.contWrap header nav ul>li>a>h2{
+    float:left;
+    color:#e42050; font-size:25px; font-weight:500;
+}
+
+/* 우측 연락처 */
+.contWrap aside.phone{
+    position:fixed; right:-215px; bottom:10px; z-index:100; 
+}
+.contWrap aside.phone.on{
+    -webkit-animation:asideOn 0.5s ease both;
+    animation:asideOn 0.5s ease both;
+}
+.contWrap aside.phone.off{
+    -webkit-animation:asideOff 0.5s ease both;
+    animation:asideOff 0.5s ease both;
+}
+@keyframes asideOn{
+    from{
+        right:-215px;
+    }
+    to{
+        right:0;
+    }
+}
+@keyframes asideOff{
+    to{
+        right:-215px;
+    }
+    from{
+        right:0;
+    }
+}
+
+
+.contWrap .rightSideWrap{
+    width:287px; height:337px;
+    background:url('../img/callBox_39.png') no-repeat;
+}
+.contWrap .rightSideWrap .phoneBody .top>p{
+    width:149px; height:30px; position:absolute; top:37px; left:90px;
+    background:#4a3a38; line-height:30px; text-align:center; letter-spacing: 2px;
+    font-size:25px; color:#f9d5c5; font-family: 'VT323', monospace; font-weight:500;
+}
+.contWrap .rightSideWrap .phoneBody .top>button{
+    display:block; width:30px; height:30px; position:absolute; right:8px; top:37px; text-align:center;
+    border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; background:#4a3a38;
+}
+.contWrap .rightSideWrap .phoneBody .top>button>span{
+    position:absolute; bottom:3px; left:9px;
+    font-size:30px; color:#f9d5c5; font-family: 'VT323', monospace;
+}
+.contWrap .rightSideWrap .phoneBody .top>button:hover{
+    background:#f9d5c5;
+}
+.contWrap .rightSideWrap .phoneBody .top>button:hover>span{
+    color:#4a3a38;
+}
+
+.contWrap .rightSideWrap .phoneBody>ul{
+    width:186px; height:247px; position: absolute; right:15px; top:75px;
+    background:#d2a6a0; border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px; 
+}
+.contWrap .rightSideWrap .phoneBody>ul>li:first-child{
+    margin-top:16px;
+}
+.contWrap .rightSideWrap .phoneBody>ul>li{
+    margin-bottom:10px;
+}
+.contWrap .rightSideWrap .phoneBody>ul dl>dt{
+    height:28px; line-height:28px; padding-left:15px;
+    background:#f9d5c5; color:#d2a6a0; font-weight:900; font-size:18px; letter-spacing: 1px;
+}
+.contWrap .rightSideWrap .phoneBody>ul dl>dd{
+    padding-left:15px; margin-top:5px; 
+    color:#4a3a38; font-size:14px; font-weight:600;
+}
+.contWrap .rightSideWrap .phoneBody>ul>li:nth-child(2) dl>dd{
+    font-size:13px;
+}
+.contWrap .rightSideWrap .phoneBody>ul dl>dd>a{
+    padding-left:26px; margin-top:5px;
+    color:#4a3a38; font-size:14px; font-weight:600;
+}
+.contWrap .rightSideWrap .phoneBody>ul>li:nth-child(3) dl>dd>a{
+    background:url('../img/github.png') left center no-repeat;
+    background-size:20px 20px;
+}
+.contWrap .rightSideWrap .phoneBody>ul>li:nth-child(4) dl>dd>a{
+    background:url('../img/blog.png') left center no-repeat;
+    background-size:20px 20px;
+}
+
+.contWrap .rightSideWrap>button.phoneHandle{
+    display:block; width:39px; height:103px; position:absolute; top:71px; left:22px;
+}
+.contWrap .rightSideWrap>button.phoneHandle>img{
+    width:39px; height:auto;
+}
+.contWrap .rightSideWrap>button.phoneHandle:hover{
+	animation: shake-lr 2.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+	animation: shake-lr 2.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+}
+
+@keyframes shake-lr {
+0%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+2.5% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+}
+5%,
+10%,
+15% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+}
+7.5%,
+12.5%,
+17.5% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+}
+20% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+}
+30% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+}
+}
+
+@media (max-width:1024px){
+    .contWrap header{
+        height:85px; width:100%;
+    }
+    .contWrap header:after{
+        display:table; content:''; clear:both;
+    }
+    .contWrap header h1.logo{
+        position:fixed; top:33px; left:18px; display:block; width:150px;
+        font-size:20px; color:#333;
+    }
+
+    .contWrap header nav{
+        position:relative; left: unset; height:85px; top:0; width:calc(100% - 168px); float:right;
+        transform:none;
+    }
+    .contWrap header nav:after{
+        display:none;
+    }
+    .contWrap header nav ul{
+        *zoom:1; width:425px; position:absolute; top:35px; left:50%;
+        transform:translateX(-50%); -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%);
+    }
+    .contWrap header nav ul:after{
+        content:''; display:table; clear:both;
+    }
+    .contWrap header nav ul>li{
+        margin:0 13px; float:left;
+    }
+    .contWrap header nav ul>li>a{
+        position: relative;
+    }
+    .contWrap header nav ul>li.prevBtn>a,
+    .contWrap header nav ul>li.nextBtn>a{
+        display:none;
+    }
+
+    .contWrap header nav ul>li>a>span{
+        float:none; display:none; width:9px; height:9px; margin:0;
+        position: absolute; top:-10px; left:50%;
+        transform:translateX(-50%); -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%);
+        background:#e42050; border:none;
+    }
+    .contWrap header nav ul>li>a:hover>span{
+        display:block;
+        background:#f45a76; border:0;
+    }
+    .contWrap header nav ul>li>a>h2{
+        font-size:20px;
+    }
+    .contWrap header nav ul>li>a:hover>h2{
+        color:#f45a76;
+    }
+    
+    /* 우측 연락처 */
+    .contWrap aside.phone{
+        right:-228px; bottom:10px;
+    }
+    @keyframes asideOn{
+        from{
+            right:-228px;
+        }
+        to{
+            right:0;
+        }
+    }
+    @keyframes asideOff{
+        to{
+            right:-228px;
+        }
+        from{
+            right:0;
+        }
+    }
+    
+    
+    .contWrap .rightSideWrap{
+        width:269px; height:272px;
+        background:url('../img/callBox_tablet.png') no-repeat;
+    }
+    .contWrap .rightSideWrap .phoneBody .top>p{
+        width:170px; top:154px; left:-25px;
+        transform:rotate(270deg); -webkit-transform:rotate(270deg); -ms-transform:rotate(270deg);
+    }
+    .contWrap .rightSideWrap .phoneBody .top>button{
+        right:194px; top:42px;
+        transform:rotate(270deg); -webkit-transform:rotate(270deg); -ms-transform:rotate(270deg);
+    }
+    
+    .contWrap .rightSideWrap .phoneBody>ul{
+        width:175px; height:227px; right:12px; top:33px;
+    }
+    .contWrap .rightSideWrap .phoneBody>ul>li:first-child{
+        margin-top:14px;
+    }
+    .contWrap .rightSideWrap .phoneBody>ul dl>dt{
+        height:25px; line-height:25px; 
+        font-size:15px;
+    }
+    .contWrap .rightSideWrap .phoneBody>ul dl>dd{
+        margin-top:6px; 
+        font-size:13px; 
+    }
+    .contWrap .rightSideWrap .phoneBody>ul>li:nth-child(2) dl>dd{
+        font-size:12px;
+    }
+    .contWrap .rightSideWrap .phoneBody>ul dl>dd>a{
+        font-size:13px;
+    }
+    .contWrap .rightSideWrap .phoneBody>ul>li:nth-child(3) dl>dd>a{
+        background-size:18px 18px;
+    }
+    .contWrap .rightSideWrap .phoneBody>ul>li:nth-child(4) dl>dd>a{
+        background-size:18px 18px; 
+    }
+    
+    .contWrap .rightSideWrap>button.phoneHandle{
+        top:60px; left:-7px;
+    }
+}
+
+@media (max-width:768px){
+    .contWrap header{
+        height:62px;
+    }
+    .contWrap header:after{
+        display:table; content:''; clear:both;
+    }
+    .contWrap header h1.logo{
+        top:21px; left:25px; display:block; width:150px;
+        font-size:18px; color:#333;
+    }
+    .contWrap header button.mobMenuBtn{
+        display:block; position:fixed; right:25px; top:22px; z-index:150; width:25px; height:18px;
+        text-indent:-99999999px; font-size:0;
+    }
+    .contWrap header button.mobMenuBtn:focus{
+        outline:none;
+    }
+    .contWrap header button.mobMenuBtn>span{
+        display:block; width:25px; height:2px; position:absolute; left:0;
+        background:#000; border-radius:50px; -webkit-border-radius:50px; -moz-border-radius:50px;
+    }
+
+    .contWrap header button.mobMenuBtn>span:nth-child(1){
+        top:0;
+    }
+    .contWrap header button.mobMenuBtn.on>span:nth-child(1){
+        animation:mobMenuOn1 0.5s ease both;
+    }
+    .contWrap header button.mobMenuBtn.off>span:nth-child(1){
+        animation:mobMenuOff1 0.5s ease both;
+    }
+    @keyframes mobMenuOff1{
+        from{
+            top:8px;
+            transform:rotate(40deg);
+        }
+        30%{
+            top:0px;
+            transform:rotate(-40deg);
+        }to{
+            top:0px;
+            transform:rotate(0);
+        }
+    }
+    @keyframes mobMenuOn1{
+        from{
+            top:0;
+            transform:rotate(0);
+        }
+        70%{
+            top:8px;
+            transform:rotate(0);
+        }to{
+            top:8px;
+            transform:rotate(40deg);
+        }
+    }
+    .contWrap header button.mobMenuBtn>span:nth-child(2){
+        top:8px;
+    }
+    .contWrap header button.mobMenuBtn.on>span:nth-child(2){
+        animation:mobMenuOn2 0.5s ease both;
+    }
+    .contWrap header button.mobMenuBtn.off>span:nth-child(2){
+        animation:mobMenuOff2 0.5s ease both;
+    }
+    @keyframes mobMenuOff2{
+        from{
+            opacity:0;
+        }
+        50%{
+            opacity:1;
+        }
+        to{
+            opacity:1;
+        }
+    }
+    @keyframes mobMenuOn2{
+        from{
+            opacity:1;
+        }
+        50%{
+            opacity:0;
+        }
+        to{
+            opacity:0;
+        }
+    }
+    .contWrap header button.mobMenuBtn>span:nth-child(3){
+        top:16px;
+    }
+    .contWrap header button.mobMenuBtn.on>span:nth-child(3){
+        animation:mobMenuOn3 0.5s ease both;
+    }
+    .contWrap header button.mobMenuBtn.off>span:nth-child(3){
+        animation:mobMenuOff3 0.5s ease both;
+    }
+    @keyframes mobMenuOff3{
+        from{
+            top:8px;
+            transform:rotate(-40deg);
+        }
+        30%{
+            top:16px;
+            transform:rotate(40deg);
+        }
+        to{
+            top:16px;
+            transform:rotate(0);
+        }
+    }
+    @keyframes mobMenuOn3{
+        from{
+            top:16px;
+            transform:rotate(0);
+        }
+        70%{
+            top:8px;
+            transform:rotate(0);
+        }
+        to{
+            top:8px;
+            transform:rotate(-40deg);
+        }
+    }
+
+    .contWrap header nav ul{
+        width:140px; position:fixed; top:62px; right:0px; left:unset; padding:0 0; display:none;
+        transform:none; background:#66ADA4;
+    }
+    .contWrap header nav ul>li{
+        float:none; width:140px; margin:0; padding: 0;
+    }
+    .contWrap header nav ul>li:hover{
+        background:#6EBAB0;
+    }
+    .contWrap header nav ul>li>a{
+        height:17px; width:140px; display:block; padding:13px 0;
+    }
+    .contWrap header nav ul>li>a>span{
+        float:left; display:block; width:12px; height:12px; margin:2px 0 0 20px; position:static; top:unset; left:unset;
+        background:#f9d5c5; border:0; transform:none;
+    }
+    .contWrap header nav ul>li.prevBtn,
+    .contWrap header nav ul>li.nextBtn{
+        display:none; height:0;
+    }
+    .contWrap header nav ul>li>a:hover>span{
+        display:block; float:left;
+        background:#f9d5c5; border:0;
+    }
+    .contWrap header nav ul>li>a>h2{
+        font-size:16px; margin-left:15px; color:#f9d5c5;
+    }
+    .contWrap header nav ul>li>a:hover>h2{
+        color:#f9d5c5;
+    }
+
+    .contWrap aside.phone{
+        display:none;
+    }
+}
