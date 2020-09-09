@@ -25,11 +25,7 @@
 .contWrap .contents .contentsWrap>h2{
     position:relative;
     font-family: 'Tangerine', cursive; color:#F9D5C5; font-size:50px; font-weight:700; letter-spacing: 1px;
-}/* 
-.contWrap .contents .contentsWrap>h2:after{
-    content:''; display:block; position:absolute; width:14px; height:14px; top:-12px; left:-13px;
-    background:#7d3962; border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%;
-} */
+}
 
 .contWrap .contents .contentsWrap>ul{
     *zoom:1; width:850px; margin-top:30px;
@@ -38,18 +34,29 @@
     clear:both; display:table; content:'';
 }
 .contWrap .contents .contentsWrap>ul>li{
-    float:left; width:263px; height:263px; margin:10px 10px; overflow:hidden; position:relative;
+    float:left; width:263px; height:263px; margin:10px 10px; overflow:visible; position:relative;
     background:#fff; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;
 }
-.contWrap .contents .contentsWrap>ul>li>img{
-    width:120%; position:absolute; top:0; left:50%;
-    transform:translateX(-50%); -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%);
+.contWrap .contents .contentsWrap>ul>li:nth-child(1){
+    background:url('../img/site/cjw_pc.png') no-repeat;
+    background-size:120% auto;
+    background-position:top center;
+}
+.contWrap .contents .contentsWrap>ul>li:nth-child(2){
+    background:url('../img/site/SDU_pc.png') no-repeat;
+    background-size:120% auto;
+    background-position:top center;
+}
+.contWrap .contents .contentsWrap>ul>li:nth-child(3){
+    background:url('../img/site/cjw_pc.png') no-repeat;
+    background-size:120% auto;
+    background-position:top center;
 }
 
 .contWrap .contents .contentsWrap>ul>li .hoverCont{
-    text-align:center; padding-top:55px; position: relative; width:100%; height:100%;
-    box-sizing:border-box; background:rgba(0,0,0,0.8);
-    transform:translateY(120%); -webkit-transform:translateY(120%); -ms-transform:translateY(120%);
+    text-align:center; padding-top:55px; position: relative; width:100%; height:0;
+    box-sizing:border-box; background:rgba(0,0,0,0.8); opacity:0;
+    border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;
 }
 .contWrap .contents .contentsWrap>ul>li:hover>.hoverCont{
     animation:hoverCont 0.5s ease both;
@@ -62,10 +69,10 @@
 }
 @keyframes hoverCont{
     from{
-        transform:translateY(120%); -webkit-transform:translateY(120%); -ms-transform:translateY(120%);
+        height:0; opacity:0;
     }
     to{
-        transform:translateY(0);
+        height:100%; opacity:1;
     }
 }
 .contWrap .contents .contentsWrap>ul>li .hoverCont h3{
@@ -369,7 +376,7 @@
         background:#416E68;
     }
     .contWrap header nav ul>li:nth-child(5)>a>span{
-        float:left; display:block; width:12px; height:12px; margin:2px 0 0 20px; position:static; top:unset; left:unset;
+        float:left; display:block; width:12px; height:12px; margin:2px 0 0 20px; position:static; top:auto; left:auto;
         background:#f9d5c5; border:0; transform:none;
     }
     .contWrap header nav ul>li:nth-child(5)>a:hover>span{
@@ -402,9 +409,8 @@
     }
     
     .contWrap .contents .contentsWrap>ul>li .hoverCont{
-        padding-top:17.1615vw;
+        padding-top:17.1615vw; height:100%; opacity:1;
         background:rgba(0,0,0,0.7);
-        transform:none;
     }
     .contWrap .contents .contentsWrap>ul>li:hover>.hoverCont{
         animation:none;

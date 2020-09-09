@@ -205,7 +205,7 @@ body{
     }
 
     .contWrap header nav{
-        position:relative; left: unset; height:85px; top:0; width:calc(100% - 168px); float:right;
+        position:relative; left: auto; height:85px; top:0; width:calc(100% - 168px); float:right;
         transform:none;
     }
     .contWrap header nav:after{
@@ -341,46 +341,115 @@ body{
     }
     .contWrap header button.mobMenuBtn.on>span:nth-child(1){
         animation:mobMenuOn1 0.5s ease both;
+        -webkit-animation:mobMenuOn1 0.5s ease both;
+        -ms-animation:mobMenuOn1 0.5s ease both;
     }
     .contWrap header button.mobMenuBtn.off>span:nth-child(1){
+        -webkit-animation:mobMenuOff1 0.5s ease both;
+        -ms-animation:mobMenuOff1 0.5s ease both;
         animation:mobMenuOff1 0.5s ease both;
     }
-    @keyframes mobMenuOff1{
+    @-webkit-keyframes mobMenuOff1{
         from{
             top:8px;
-            transform:rotate(40deg);
+            transform:rotate(40deg); -ms-transform:rotate(40deg); -webkit-transform:rotate(40deg);
         }
         30%{
             top:0px;
-            transform:rotate(-40deg);
+            transform:rotate(-40deg); -ms-transform:rotate(-40deg); -webkit-transform:rotate(-40deg);
         }to{
             top:0px;
-            transform:rotate(0);
+            transform:rotate(0); -ms-transform:rotate(0); -webkit-transform:rotate(0);
+        }
+    }
+    @-ms-keyframes mobMenuOff1{
+        from{
+            top:8px;
+            transform:rotate(40deg); -ms-transform:rotate(40deg); -webkit-transform:rotate(40deg);
+        }
+        30%{
+            top:0px;
+            transform:rotate(-40deg); -ms-transform:rotate(-40deg); -webkit-transform:rotate(-40deg);
+        }to{
+            top:0px;
+            transform:rotate(0); -ms-transform:rotate(0); -webkit-transform:rotate(0);
         }
     }
     @keyframes mobMenuOn1{
         from{
             top:0;
-            transform:rotate(0);
+            transform:rotate(0); -ms-transform:rotate(0); -webkit-transform:rotate(0);
         }
         70%{
             top:8px;
-            transform:rotate(0);
+            transform:rotate(0); -ms-transform:rotate(0); -webkit-transform:rotate(0);
         }to{
             top:8px;
-            transform:rotate(40deg);
+            transform:rotate(40deg); -ms-transform:rotate(40deg); -webkit-transform:rotate(40deg);
+        }
+    }
+    @-ms-keyframes mobMenuOn1{
+        from{
+            top:0;
+            transform:rotate(0); -ms-transform:rotate(0); -webkit-transform:rotate(0);
+        }
+        70%{
+            top:8px;
+            transform:rotate(0); -ms-transform:rotate(0); -webkit-transform:rotate(0);
+        }to{
+            top:8px;
+            transform:rotate(40deg); -ms-transform:rotate(40deg); -webkit-transform:rotate(40deg);
+        }
+    }
+    @-webkit-keyframes mobMenuOn1{
+        from{
+            top:0;
+            transform:rotate(0); -ms-transform:rotate(0); -webkit-transform:rotate(0);
+        }
+        70%{
+            top:8px;
+            transform:rotate(0); -ms-transform:rotate(0); -webkit-transform:rotate(0);
+        }to{
+            top:8px;
+            transform:rotate(40deg); -ms-transform:rotate(40deg); -webkit-transform:rotate(40deg);
         }
     }
     .contWrap header button.mobMenuBtn>span:nth-child(2){
         top:8px;
     }
     .contWrap header button.mobMenuBtn.on>span:nth-child(2){
+        -ms-animation:mobMenuOn2 0.5s ease both;
+        -webkit-animation:mobMenuOn2 0.5s ease both;
         animation:mobMenuOn2 0.5s ease both;
     }
     .contWrap header button.mobMenuBtn.off>span:nth-child(2){
+        -ms-animation:mobMenuOff2 0.5s ease both;
+        -webkit-animation:mobMenuOff2 0.5s ease both;
         animation:mobMenuOff2 0.5s ease both;
     }
     @keyframes mobMenuOff2{
+        from{
+            opacity:0;
+        }
+        50%{
+            opacity:1;
+        }
+        to{
+            opacity:1;
+        }
+    }
+    @-ms-keyframes mobMenuOff2{
+        from{
+            opacity:0;
+        }
+        50%{
+            opacity:1;
+        }
+        to{
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes mobMenuOff2{
         from{
             opacity:0;
         }
@@ -402,46 +471,128 @@ body{
             opacity:0;
         }
     }
+    @-ms-keyframes mobMenuOn2{
+        from{
+            opacity:1;
+        }
+        50%{
+            opacity:0;
+        }
+        to{
+            opacity:0;
+        }
+    }
+    @-webkit-keyframes mobMenuOn2{
+        from{
+            opacity:1;
+        }
+        50%{
+            opacity:0;
+        }
+        to{
+            opacity:0;
+        }
+    }
     .contWrap header button.mobMenuBtn>span:nth-child(3){
         top:16px;
     }
     .contWrap header button.mobMenuBtn.on>span:nth-child(3){
+        -ms-animation:mobMenuOn3 0.5s ease both;
+        -webkit-animation:mobMenuOn3 0.5s ease both;
         animation:mobMenuOn3 0.5s ease both;
     }
     .contWrap header button.mobMenuBtn.off>span:nth-child(3){
+        -ms-animation:mobMenuOff3 0.5s ease both;
+        -webkit-animation:mobMenuOff3 0.5s ease both;
         animation:mobMenuOff3 0.5s ease both;
     }
     @keyframes mobMenuOff3{
         from{
             top:8px;
-            transform:rotate(-40deg);
+            transform:rotate(-40deg); -ms-transform:rotate(-40deg); -webkit-transform:rotate(-40deg);
         }
         30%{
             top:16px;
-            transform:rotate(40deg);
+            transform:rotate(40deg); -ms-transform:rotate(40deg); -webkit-transform:rotate(40deg);
         }
         to{
             top:16px;
-            transform:rotate(0);
+            transform:rotate(0); -webkit-transform:rotate(0); -mstransform:rotate(0);
+        }
+    }
+    @-ms-keyframes mobMenuOff3{
+        from{
+            top:8px;
+            transform:rotate(-40deg); -ms-transform:rotate(-40deg); -webkit-transform:rotate(-40deg);
+        }
+        30%{
+            top:16px;
+            transform:rotate(40deg); -ms-transform:rotate(40deg); -webkit-transform:rotate(40deg);
+        }
+        to{
+            top:16px;
+            transform:rotate(0); -webkit-transform:rotate(0); -mstransform:rotate(0);
+        }
+    }
+    @-webkit-keyframes mobMenuOff3{
+        from{
+            top:8px;
+            transform:rotate(-40deg); -ms-transform:rotate(-40deg); -webkit-transform:rotate(-40deg);
+        }
+        30%{
+            top:16px;
+            transform:rotate(40deg); -ms-transform:rotate(40deg); -webkit-transform:rotate(40deg);
+        }
+        to{
+            top:16px;
+            transform:rotate(0); -webkit-transform:rotate(0); -ms-transform:rotate(0);
         }
     }
     @keyframes mobMenuOn3{
         from{
             top:16px;
-            transform:rotate(0);
+            transform:rotate(0); -webkit-transform:rotate(0); -ms-transform:rotate(0);
         }
         70%{
             top:8px;
-            transform:rotate(0);
+            transform:rotate(0); -webkit-transform:rotate(0); -ms-transform:rotate(0);
         }
         to{
             top:8px;
-            transform:rotate(-40deg);
+            transform:rotate(-40deg); -ms-transform:rotate(-40deg); -webkit-transform:rotate(-40deg);
+        }
+    }
+    @-ms-keyframes mobMenuOn3{
+        from{
+            top:16px;
+            transform:rotate(0); -webkit-transform:rotate(0); -ms-transform:rotate(0);
+        }
+        70%{
+            top:8px;
+            transform:rotate(0); -webkit-transform:rotate(0); -ms-transform:rotate(0);
+        }
+        to{
+            top:8px;
+            transform:rotate(-40deg); -ms-transform:rotate(-40deg); -webkit-transform:rotate(-40deg);
+        }
+    }
+    @-webkit-keyframes mobMenuOn3{
+        from{
+            top:16px;
+            transform:rotate(0); -webkit-transform:rotate(0); -ms-transform:rotate(0);
+        }
+        70%{
+            top:8px;
+            transform:rotate(0); -webkit-transform:rotate(0); -ms-transform:rotate(0);
+        }
+        to{
+            top:8px;
+            transform:rotate(-40deg); -ms-transform:rotate(-40deg); -webkit-transform:rotate(-40deg);
         }
     }
 
     .contWrap header nav ul{
-        width:140px; position:fixed; top:62px; right:0px; left:unset; padding:0 0; display:none;
+        width:140px; position:fixed; top:62px; right:0px; left: auto; padding:0 0; display:none;
         transform:none; background:#66ADA4;
     }
     .contWrap header nav ul>li{
@@ -454,7 +605,7 @@ body{
         height:17px; width:140px; display:block; padding:13px 0;
     }
     .contWrap header nav ul>li>a>span{
-        float:left; display:block; width:12px; height:12px; margin:2px 0 0 20px; position:static; top:unset; left:unset;
+        float:left; display:block; width:12px; height:12px; margin:2px 0 0 20px; position:static; top:auto; left:auto;
         background:#f9d5c5; border:0; transform:none;
     }
     .contWrap header nav ul>li.prevBtn,

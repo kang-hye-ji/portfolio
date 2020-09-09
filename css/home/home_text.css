@@ -1,10 +1,79 @@
 /* Welcome */
 .welcome {
+	-ms-animation: heartbeat 5s ease-in-out infinite both;
 	-webkit-animation: heartbeat 5s ease-in-out infinite both;
     animation: heartbeat 5s ease-in-out infinite both;
 }
 
+@-ms-keyframes heartbeat {
+from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+}
+2% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+5% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+}
+10% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+14% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+}
+}
 @-webkit-keyframes heartbeat {
+from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+}
+2% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+5% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+}
+10% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+14% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+}
+}
+@keyframes heartbeat {
 from {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -41,13 +110,41 @@ from {
 
 /* welcome flicker */
 .flicker {
+    -ms-animation: shine 2s forwards, blink 3s 2s infinite, flicker 7s infinite;
+    -webkit-animation: shine 2s forwards, blink 3s 2s infinite, flicker 7s infinite;
     animation: shine 2s forwards, blink 3s 2s infinite, flicker 7s infinite;
     color:#222;
   }
   
   .fast-flicker {
+    -ms-animation: shine 2s forwards, blink 10s 1s infinite, flicker 3s infinite;
+    -webkit-animation: shine 2s forwards, blink 10s 1s infinite, flicker 3s infinite;
     animation: shine 2s forwards, blink 10s 1s infinite, flicker 3s infinite;
     color:#222;
+  }
+  @-ms-keyframes shine {
+    0% {
+      color: #222;
+      text-shadow: none;
+    }
+    100% {
+      color: #f8c5cf;
+      text-shadow: 0 0 0.6rem #f8c5cf, 0 0 1.5rem #f96b85,
+        -0.2rem 0.1rem 1rem #f96b85, 0.2rem 0.1rem 1rem #f45a76,
+        0 -0.5rem 2rem #f45a76, 0 0.5rem 3rem #f45a76;
+    }
+  }
+  @-webkit-keyframes shine {
+    0% {
+      color: #222;
+      text-shadow: none;
+    }
+    100% {
+      color: #f8c5cf;
+      text-shadow: 0 0 0.6rem #f8c5cf, 0 0 1.5rem #f96b85,
+        -0.2rem 0.1rem 1rem #f96b85, 0.2rem 0.1rem 1rem #f45a76,
+        0 -0.5rem 2rem #f45a76, 0 0.5rem 3rem #f45a76;
+    }
   }
   @keyframes shine {
     0% {
@@ -62,6 +159,48 @@ from {
     }
   }
   
+  @-ms-keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #f8c5cf;
+      text-shadow: 0 0 0.6rem #f8c5cf, 0 0 1.5rem #f96b85,
+        -0.2rem 0.1rem 1rem #f96b85, 0.2rem 0.1rem 1rem #f96b85,
+        0 -0.5rem 2rem #f45a76, 0 0.5rem 3rem #f45a76;
+    }
+    28%,
+    33% {
+      color: #d96a7e;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #000;
+      text-shadow: none;
+    }
+  }
+  @-webkit-keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #f8c5cf;
+      text-shadow: 0 0 0.6rem #f8c5cf, 0 0 1.5rem #f96b85,
+        -0.2rem 0.1rem 1rem #f96b85, 0.2rem 0.1rem 1rem #f96b85,
+        0 -0.5rem 2rem #f45a76, 0 0.5rem 3rem #f45a76;
+    }
+    28%,
+    33% {
+      color: #d96a7e;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #000;
+      text-shadow: none;
+    }
+  }
   @keyframes blink {
     0%,
     22%,
@@ -84,6 +223,256 @@ from {
     }
   }
   
+  @-ms-keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
   @keyframes flicker {
     from {
       opacity: 1;
@@ -227,18 +616,23 @@ from {
 
 .contents .intro li:first-child{
     width: 154px;
+    -ms-animation: type 0.5s steps(6, end);
     -webkit-animation: type 0.5s steps(6, end);
     animation: type 0.5s steps(6, end);
+    -ms-animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 .contents .intro li:nth-child(2){
     width: 510px;
     opacity: 0;
+    -ms-animation: type2 1.5s steps(15, end);
     -webkit-animation: type2 1.5s steps(15, end);
     animation: type2 1.5s steps(15, end);
+    -ms-animation-delay: 0.8s;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
+    -ms-animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
@@ -246,10 +640,13 @@ from {
 .contents .intro li:nth-child(3){
     width: 185px;
     opacity: 0;
+    -ms-animation: type3 0.7s steps(7, end), blink .5s step-end infinite alternate;
     -webkit-animation: type3 0.7s steps(7, end), blink .5s step-end infinite alternate;
     animation: type3 0.7s steps(7, end), blink .5s step-end infinite alternate;
+    -ms-animation-delay: 3s;
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
+    -ms-animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
@@ -262,7 +659,18 @@ from {
     border-right: .15em solid orange;
 }
 100% {
-    border: none;
+    border: 0;
+}
+}
+@-ms-keyframes type {
+0% {
+    width: 0;
+}
+99.9% {
+    border-right: .15em solid orange;
+}
+100% {
+    border: 0;
 }
 }
 
@@ -274,7 +682,7 @@ from {
     border-right: .15em solid orange;
 }
 100% {
-    border: none;
+    border: 0;
 }
 }
 
@@ -290,7 +698,22 @@ from {
 }
 100% {
     opacity: 1;
-    border: none;
+    border: 0;
+}
+}
+@-ms-keyframes type2 {
+0% {
+    width: 0;
+}
+1% {
+    opacity: 1;
+}
+99.9% {
+    border-right: .15em solid orange;
+}
+100% {
+    opacity: 1;
+    border: 0;
 }
 }
 
@@ -306,11 +729,22 @@ from {
 }
 100% {
     opacity: 1;
-    border: none;
+    border: 0;
 }
 }
 
 @keyframes type3 {
+0% {
+    width: 0;
+}
+1% {
+    opacity: 1;
+}
+100% {
+    opacity: 1;
+}
+}
+@-ms-keyframes type3 {
 0% {
     width: 0;
 }
@@ -339,9 +773,14 @@ from {
     border-color: transparent;
 }
 }
+@-ms-keyframes blink {
+50% {
+    border-color: transparent;
+}
+}
 @-webkit-keyframes blink {
 50% {
-    border-color: tranparent;
+    border-color: transparent;
 }
 }
 

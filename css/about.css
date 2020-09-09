@@ -15,7 +15,7 @@
 
 
 .contWrap .contents{
-    width:calc(100% - 280px); height:100%; margin-left:280px; position:relative; z-index:1;
+    width:calc(100% - 280px); height:100%; margin-left:280px; position:relative; z-index:1; padding-bottom:50px;
     background:#2d787e;
 }
 
@@ -375,7 +375,7 @@
         background:#416E68;
     }
     .contWrap header nav ul>li:nth-child(3)>a>span{
-        float:left; display:block; width:12px; height:12px; margin:2px 0 0 20px; position:static; top:unset; left:unset;
+        float:left; display:block; width:12px; height:12px; margin:2px 0 0 20px; position:static; top:auto; left:auto;
         background:#f9d5c5; border:0; transform:none;
     }
     .contWrap header nav ul>li:nth-child(3)>a:hover>span{
@@ -497,10 +497,10 @@
     }
     
     .contents .eduNlicense .license{
-        bottom:unset; top:55vw; left:0; margin-bottom:0;
+        bottom:auto; top:55vw; left:0; margin-bottom:0;
     }
     .contents .eduNlicense .license .licenseTit{
-        right:unset; left:0; bottom:unset; top:0;
+        right:auto; left:0; bottom:auto; top:0;
         transform:rotate(0);
     }
     .contents .eduNlicense .license .licenseTit h2{
