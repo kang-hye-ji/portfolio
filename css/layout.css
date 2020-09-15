@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 body{
     background:#2d787e;
 }
@@ -94,7 +96,7 @@ body{
 
 .contWrap .rightSideWrap{
     width:287px; height:337px;
-    background:url('../img/callBox_39.png') no-repeat;
+    background:url('http://kangfronter-site.com/img/callbox39.png') no-repeat;
 }
 .contWrap .rightSideWrap .phoneBody .top>p{
     width:149px; height:30px; position:absolute; top:37px; left:90px;
@@ -270,7 +272,7 @@ body{
     
     .contWrap .rightSideWrap{
         width:269px; height:272px;
-        background:url('../img/callBox_tablet.png') no-repeat;
+        background:url('../img/callboxTablet.png') no-repeat;
     }
     .contWrap .rightSideWrap .phoneBody .top>p{
         width:170px; top:154px; left:-25px;

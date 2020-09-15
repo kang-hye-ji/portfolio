@@ -38,7 +38,7 @@
     background:#fff; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;
 }
 .contWrap .contents .contentsWrap>ul>li:nth-child(1){
-    background:url('../img/site/cjw_pc.png') no-repeat;
+    background:url('../img/site/AG_main.png') no-repeat;
     background-size:120% auto;
     background-position:top center;
 }
@@ -278,6 +278,9 @@
 }
 .contents .contentsWrap>ul .projDetail .projDetailCont .pageList>li .pageImg{
     width:100%; height:700px; overflow-y:scroll;
+}
+.contents .contentsWrap>ul>.agmall .projDetail .projDetailCont .pageList>li .pageImg{
+    height:350px;
 }
 .contents .contentsWrap>ul>.port .projDetail .projDetailCont .pageList>li .pageImg{
     height:120px;
